@@ -1,0 +1,79 @@
+.bookmark {
+  background: $white;
+  margin: 0 auto $double-gap;
+  max-width: 900px;
+  position: relative;
+  border-radius: $half-gap;
+  box-shadow: 0px 2px 5px 0px rgba(34, 60, 80, 0.13);
+  .container {
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+  &-logo {
+    position: absolute;
+    top: -30px;
+    left: 47%;
+  }
+  &-content {
+    text-align: center;
+    padding-top: $double-gap * 2;
+    h1 {
+      font-size: $gap * 1.5;
+      font-weight: 700;
+    }
+    p {
+      padding-top: $gap;
+      color: $colorText;
+    }
+  }
+  &-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: $double-gap * 1.5 $gap 0;
+    padding-bottom: $double-gap * 2;
+    .btn-back {
+      background: $colorBtn;
+      color: $white;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: $gap $double-gap;
+      border-radius: $double-gap;
+      transition: .15s ease-in;
+      &:hover {
+        background: $colorBtnActive;
+      }
+    }
+    .bookmarked {
+      width: 200px;
+      background: #f4f8f9;
+      display: flex;
+      align-items: center;
+      border-radius: $double-gap;
+      user-select: none;
+      svg {
+        margin-right: $gap * 1.5;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+      p {
+        font-weight: 700;
+      }
+    }
+    .bookmarked.active {
+      svg {
+        circle {
+          fill: $colorBtn
+        }
+        path {
+          fill: $white;
+        }
+      }
+      p {
+        color: $colorBtn;
+      }
+    }
+  }
+}

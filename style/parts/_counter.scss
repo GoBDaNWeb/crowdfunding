@@ -1,0 +1,51 @@
+.counter {
+  background: $white;
+  margin: 0 auto $double-gap;
+  max-width: 900px;
+  border-radius: $half-gap;
+  box-shadow: 0px 2px 5px 0px rgba(34, 60, 80, 0.13);
+  text-align: left;
+  .container {
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+  &-price {
+    display: flex;
+    justify-content: center;
+    padding: $double-gap * 2 0 $double-gap 0;
+    &__item {
+      padding: 0 $double-gap 0 $double-gap;
+      h2 {
+        font-size: $double-gap;
+        font-weight: 700;
+        margin-bottom: $half-gap;
+      }
+      p {
+        color: $colorText;
+      }
+    }
+    &__item:nth-child(even) {
+      border-right: 1px solid #111;
+      border-left: 1px solid #111;
+    }
+  }
+  &-progress {
+    padding-bottom: $double-gap;
+    margin: 0 $gap;
+    &__bg {
+      background: #f4f8f9;
+      max-width: 50rem;
+      flex: 1;
+      height: $half-gap;
+      border-radius: $gap;
+      margin-bottom: $double-gap;
+      .counter-progress__line {
+        background: $colorBtn;
+
+        height: $half-gap;
+        border-radius: $gap;
+        margin-right: 40%;
+      }
+    }
+  }
+}
