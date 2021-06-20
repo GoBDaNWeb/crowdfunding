@@ -129,7 +129,8 @@
 .bookmark-logo {
   position: absolute;
   top: -30px;
-  left: 47%;
+  left: 50%;
+  transform: translate(-50%);
 }
 .bookmark-content {
   text-align: center;
@@ -602,12 +603,16 @@
     right: 20%;
     top: 8rem;
   }
+  .header .container .header-content__nav .header-nav__menu .nav-menu__item {
+    width: 20rem;
+  }
   .header .container .header-content__nav .header-nav__menu .nav-menu__item a {
     display: inline-block;
     padding: 1rem;
     width: 20rem;
     color: #000;
     background: #fff;
+    margin: 0;
   }
   .header .container .header-content__nav .header-nav__menu .nav-menu__item:nth-child(even) a {
     border-bottom: 1px solid #737373;
@@ -664,7 +669,7 @@
     padding-left: 1rem;
   }
   .modal-project__body .modal-project__content .modal-project__item .modal-item__title .title-input label:last-child span {
-    padding-top: 1rem;
+    padding: 1rem 0;
   }
 }
 @media (max-width: 930px) and (max-width: 700px) and (max-width: 600px) {
@@ -679,7 +684,7 @@
   .modal-project__body .modal-project__content .modal-project__item .modal-item__title {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
   .modal-project__body .modal-project__content .modal-project__item .modal-item__hide {
     display: flex;
@@ -697,7 +702,8 @@
   }
   .bookmark-button .bookmarked {
     width: 56px;
-    background: inherit;
+    background: transparent;
+    border: transparent;
   }
   .bookmark-button .bookmarked svg {
     margin: 0;
@@ -706,11 +712,53 @@
     display: none;
   }
 
+  .counter-price {
+    flex-direction: column;
+    align-items: center;
+  }
+  .counter-price__item {
+    padding: 1rem;
+    text-align: center;
+  }
+  .counter-price__item:nth-child(even) {
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+  }
+
   .about-item__reward {
     flex-direction: column;
   }
   .about-item__reward .item-reward__button {
     margin-top: 1rem;
+  }
+
+  .modal-project__body .modal-project__content .modal-project__item .modal-item__title .title-input label:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-left: 1rem;
+    text-align: left;
+  }
+  .modal-project__body .modal-project__content .modal-project__item .modal-item__title .title-input label:last-child span {
+    padding: 1rem 0;
+  }
+}
+@media (max-width: 930px) and (max-width: 700px) and (max-width: 600px) and (max-width: 458px) and (max-width: 400px) {
+  .modal-project__body .modal-project__content .modal-project__item .modal-item__hide.active {
+    height: 8rem;
+  }
+  .modal-project__body .modal-project__content .modal-project__item .modal-item__hide.active .hide-input {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-project__body .modal-project__content .modal-project__item .modal-item__hide.active .hide-input .input-price {
+    margin: 0 0 1rem;
+  }
+  .modal-project__body .modal-project__content .modal-project__item .modal-item__hide.active .hide-input .input-price input {
+    width: 3rem;
   }
 }
 body.dark-theme {
@@ -763,6 +811,14 @@ body.dark-theme .modal-project .modal-project__content .modal-project__item .mod
 body.dark-theme .modal-project .modal-project__content .modal-project__item .modal-item__hide .hide-input .input-price input {
   background: none;
   color: #fff;
+}
+@media (max-width: 458px) {
+  body.dark-theme .counter .counter-price__item:nth-child(even) {
+    border-right: none;
+    border-left: none;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+  }
 }
 
 * {

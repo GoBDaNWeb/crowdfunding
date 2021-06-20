@@ -60,4 +60,14 @@ body.dark-theme {
       }
     }
   }
+  @media (max-width: 458px) {
+    .counter {
+      .counter-price__item:nth-child(even) {
+        border-right: none;
+        border-left: none;
+        border-top: 1px solid $white;
+        border-bottom: 1px solid $white;
+      }
+    }
+  }
 }
